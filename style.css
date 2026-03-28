@@ -1492,3 +1492,244 @@ header {
         padding: 3rem 1.2rem;
     }
 }
+
+/* ============================================================
+   PÁGINA DE RESERVA
+============================================================ */
+
+/* Hero específico para reserva */
+.hero-reserva {
+    min-height: 60vh;
+    height: auto;
+    padding: 8rem 0 4rem;
+}
+
+.reserva-bg {
+    background: linear-gradient(135deg,
+        #1a3a3a 0%,
+        #2c5a5a 30%,
+        #3e7c59 60%,
+        #6396ca 100%);
+}
+
+/* Grid principal de reserva */
+.reserva-grid {
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    gap: 3rem;
+    align-items: start;
+}
+
+/* Formulario de reserva */
+.reserva-formulario {
+    background: var(--color-blanco);
+    border-radius: var(--radius-card);
+    padding: 2.5rem;
+    box-shadow: var(--sombra-card);
+    border: 1px solid var(--color-borde);
+}
+
+.formulario-descripcion {
+    font-size: 0.9rem;
+    color: var(--color-texto-suave);
+    margin-top: 0.5rem;
+    line-height: 1.6;
+}
+
+.formulario-reserva {
+    margin-top: 1.5rem;
+}
+
+/* Select personalizado */
+.formulario-reserva select {
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%236396ca' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 1rem center;
+    background-size: 1rem;
+}
+
+/* Resumen de precios */
+.resumen-precios {
+    background: var(--color-fondo);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    border: 1px solid var(--color-borde);
+}
+
+.resumen-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.6rem 0;
+    font-size: 0.9rem;
+    color: var(--color-texto-suave);
+    border-bottom: 1px dashed var(--color-borde);
+}
+
+.resumen-item:last-of-type {
+    border-bottom: none;
+}
+
+.resumen-item strong {
+    color: var(--color-texto);
+    font-weight: 600;
+}
+
+.resumen-total {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem 0 0.4rem;
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-top: 2px solid var(--color-principal);
+}
+
+.resumen-total strong {
+    font-size: 1.3rem;
+    color: var(--color-acento);
+}
+
+.btn-reservar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-top: 0.5rem;
+}
+
+.reserva-segura {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.75rem;
+    color: var(--color-texto-suave);
+}
+
+.reserva-segura i {
+    color: var(--color-acento);
+    margin-right: 0.3rem;
+}
+
+/* Beneficios card */
+.beneficios-card {
+    background: var(--color-blanco);
+    border-radius: var(--radius-card);
+    padding: 2rem;
+    box-shadow: var(--sombra-suave);
+    border: 1px solid var(--color-borde);
+    margin-bottom: 2rem;
+}
+
+.beneficios-header {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+}
+
+.beneficios-header i {
+    font-size: 1.8rem;
+    color: var(--color-principal);
+}
+
+.beneficios-header h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: var(--color-texto);
+}
+
+.beneficios-lista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.beneficios-lista li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    font-size: 0.9rem;
+    color: var(--color-texto-suave);
+    line-height: 1.5;
+}
+
+.beneficios-lista li i {
+    color: var(--color-acento);
+    font-size: 1rem;
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+}
+
+/* Card inspiracional */
+.inspiracion-card {
+    background: linear-gradient(135deg, var(--color-principal-light) 0%, rgba(99, 150, 202, 0.05) 100%);
+    border-radius: var(--radius-card);
+    padding: 2rem;
+    text-align: center;
+    border: 1px solid var(--color-borde);
+}
+
+.inspiracion-card i {
+    font-size: 2rem;
+    color: var(--color-secundario);
+    margin-bottom: 1rem;
+}
+
+.inspiracion-card h4 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--color-texto);
+    margin-bottom: 0.8rem;
+}
+
+.inspiracion-card p {
+    font-size: 0.9rem;
+    color: var(--color-texto-suave);
+    line-height: 1.7;
+}
+
+/* ============================================================
+   RESPONSIVE PARA RESERVA
+============================================================ */
+
+@media (max-width: 900px) {
+    .reserva-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .reserva-info {
+        order: 2;
+    }
+    
+    .reserva-formulario {
+        order: 1;
+    }
+}
+
+@media (max-width: 680px) {
+    .hero-reserva {
+        min-height: 50vh;
+        padding: 7rem 0 3rem;
+    }
+    
+    .reserva-formulario {
+        padding: 1.5rem;
+    }
+    
+    .formulario-titulo {
+        font-size: 1.4rem;
+    }
+    
+    .resumen-total strong {
+        font-size: 1.1rem;
+    }
+    
+    .beneficios-card,
+    .inspiracion-card {
+        padding: 1.5rem;
+    }
+}

@@ -255,3 +255,136 @@ document.addEventListener('DOMContentLoaded', function() {
     
 });
 
+    // ============================================================
+    // SISTEMA DE RESERVA - CÁLCULO DE TOTAL A PAGAR
+    // ============================================================
+    
+    const reservaForm = document.getElementById('reservaForm');
+    const fechaLlegada = document.getElementById('fechaLlegada');
+    const fechaSalida = document.getElementById('fechaSalida');
+    const tipoHabitacion = document.getElementById('tipoHabitacion');
+    const huespedes = document.getElementById('huespedes');
+    
+    const habitacionNombreSpan = document.getElementById('habitacionNombre');
+    const precioNocheSpan = document.getElementById('precioNoche');
+    const numeroNochesSpan = document.getElementById('numeroNoches');
+    const totalPagarSpan = document.getElementById('totalPagar');
+    
+    // Precios por tipo de habitación
+    const preciosHabitacion = {
+        estandar: 180,
+        deluxe: 250,
+        suite: 390
+    };
+    
+    // Nombres de habitaciones
+    const nombresHabitacion = {
+        estandar: 'Estándar',
+        deluxe: 'Deluxe',
+        suite: 'Suite "La Nube"'
+    };
+    
+    // Función para calcular número de noches
+    function calcularNoches() {
+        if (!fechaLlegada.value || !fechaSalida.value) return 0;
+        
+        const llegada = new Date(fechaLlegada.value);
+        const salida = new Date(fechaSalida.value);
+        
+        if (salida <= llegada) return 0;
+        
+        const diferenciaTiempo = salida.getTime() - llegada.getTime();
+        const diferenciaDias = Math.ceil(diferenciaTiempo / (1000 * 3600 * 24));
+        
+        return diferenciaDias;
+    }
+    
+    // Función para actualizar el resumen de precios
+    function actualizarResumen() {
+        const habitacion = tipoHabitacion.value;
+        const precioPorNoche = preciosHabitacion[habitacion];
+        const noches = calcularNoches();
+        const total = precioPorNoche * noches;
+        
+        // Actualizar DOM
+        habitacionNombreSpan.textContent = nombresHabitacion[habitacion];
+        precioNocheSpan.textContent = `$${precioPorNoche} USD`;
+        numeroNochesSpan.textContent = noches;
+        
+        if (noches > 0) {
+            totalPagarSpan.textContent = `$${total} USD`;
+        } else {
+            totalPagarSpan.textContent = `$0 USD`;
+        }
+    }
+    
+    // Escuchar cambios en los campos que afectan el precio
+    if (tipoHabitacion) {
+        tipoHabitacion.addEventListener('change', actualizarResumen);
+    }
+    
+    if (fechaLlegada) {
+        fechaLlegada.addEventListener('change', actualizarResumen);
+    }
+    
+    if (fechaSalida) {
+        fechaSalida.addEventListener('change', actualizarResumen);
+    }
+    
+    // Manejar envío del formulario de reserva
+    if (reservaForm) {
+        reservaForm.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Validar fechas
+            const noches = calcularNoches();
+            if (noches <= 0) {
+                showNotification('Por favor selecciona fechas válidas (la salida debe ser posterior a la llegada)', 'error');
+                return;
+            }
+            
+            const habitacion = tipoHabitacion.value;
+            const precioPorNoche = preciosHabitacion[habitacion];
+            const total = precioPorNoche * noches;
+            const nombre = document.getElementById('nombre').value;
+            const email = document.getElementById('email').value;
+            
+            if (!nombre || !email) {
+                showNotification('Por favor completa todos los campos', 'error');
+                return;
+            }
+            
+            // Simular envío de reserva
+            const submitBtn = this.querySelector('.btn-reservar');
+            const originalText = submitBtn.innerHTML;
+            
+            submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Procesando...';
+            submitBtn.disabled = true;
+            
+            setTimeout(() => {
+                submitBtn.innerHTML = '<i class="fa-regular fa-check-circle"></i> Consulta enviada';
+                submitBtn.style.background = '#3E7C59';
+                
+                // Mostrar resumen de la consulta
+                showNotification(
+                    `¡Hola ${nombre}! Hemos recibido tu solicitud para ${noches} noches en ${nombresHabitacion[habitacion]}. Total estimado: $${total} USD. Nos pondremos en contacto contigo en las próximas 24 horas.`,
+                    'success'
+                );
+                
+                // Resetear formulario
+                reservaForm.reset();
+                if (fechaLlegada) fechaLlegada.value = '';
+                if (fechaSalida) fechaSalida.value = '';
+                actualizarResumen();
+                
+                setTimeout(() => {
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                    submitBtn.style.background = '';
+                }, 3000);
+            }, 1500);
+        });
+    }
+    
+    // Inicializar resumen
+    actualizarResumen();

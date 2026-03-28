@@ -3,54 +3,214 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hotel Casa en las Nubes — Tu lugar de descanso</title>
+  <title>Casa en las Nubes — Reserva tu estancia</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <script src="calculadora.js"></script>
 </head>
 
 <body>
-    <header>
-        <nav class="nav-inner" aria-label="Navegación principal">
-            <!-- Logo -->
-            <a href="index.html" class="logo">
-                Casa en las Nubes<span>.</span> Hotel Boutique
-            </a>
- 
-            <!-- Menú desktop -->
-            <ul class="nav-links" role="list">
-                <li><a href="index.html" class="activo">Inicio</a></li>
-                <li><a href="habitaciones.html">Habitaciones</a></li>
-                <li><a href="reserva.html">Reserva</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
- 
-            <!-- CTA desktop -->
-            <div class="nav-cta">
-                <a href="reserva.html" class="btn-primario">Reservar ahora</a>
-            </div>
- 
-            <!-- Botón hamburguesa (mobile) -->
-            <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </nav>
- 
-    <!-- Menú mobile desplegable -->
-        <nav class="nav-mobile" id="navMobile" aria-label="Menú móvil">
-            <a href="index.html">Inicio</a>
-            <a href="habitaciones.html">Habitaciones</a>
-            <a href="reserva.html">Reserva</a>
-            <a href="contacto.html">Contacto</a>
-            <a href="reserva.html" class="btn-primario">Reservar ahora</a>
-        </nav>
-    </header>
 
-    <footer>
+  <!-- ============================================================
+       HEADER & NAVEGACIÓN (IDÉNTICO)
+  ============================================================ -->
+  <header>
+    <nav class="nav-inner" aria-label="Navegación principal">
+      <a href="index.html" class="logo">
+        Casa en las Nubes<span>.</span> Hotel Boutique
+      </a>
+ 
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="habitaciones.html">Habitaciones</a></li>
+        <li><a href="reservas.html" class="activo">Reserva</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+ 
+      <div class="nav-cta">
+        <a href="reserva.html" class="btn-primario">Reservar ahora</a>
+      </div>
+ 
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+ 
+    <nav class="nav-mobile" id="navMobile" aria-label="Menú móvil">
+      <a href="index.html">Inicio</a>
+      <a href="habitaciones.html">Habitaciones</a>
+      <a href="reserva.html">Reserva</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="reserva.html" class="btn-primario">Reservar ahora</a>
+    </nav>
+  </header>
+
+
+  <!-- ============================================================
+       MAIN - PÁGINA DE RESERVA
+  ============================================================ -->
+  <main>
+
+    <!-- =====================
+         HERO DE RESERVA
+    ===================== -->
+    <section class="hero hero-reserva" aria-label="Portada reserva">
+      <div class="hero-bg reserva-bg" role="img" aria-label="Amanecer entre las nubes"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="hero-eyebrow">
+          <i class="fa-regular fa-calendar-check" style="margin-right:.4rem;"></i>
+          Tu experiencia comienza aquí
+        </span>
+        <h1 class="hero-titulo">Tu refugio en el cielo</h1>
+        <div class="hero-divisor"></div>
+        <p class="hero-subtitulo">
+          Personaliza tu estancia en nuestra boutique. Cada rincón está diseñado para ofrecerte la serenidad de las nubes.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- =====================
+         SECCIÓN RESERVA PRINCIPAL
+    ===================== -->
+    <section class="seccion reserva-principal" id="reserva">
+      <div class="seccion-inner">
+        
+        <div class="reserva-grid">
+          
+          <!-- Columna Izquierda: Formulario de reserva -->
+          <div class="reserva-formulario">
+            <div class="formulario-header">
+              <span class="seccion-eyebrow">Solicita tu estancia</span>
+              <h2 class="formulario-titulo">Solicitud de Reserva</h2>
+              <div class="formulario-divisor"></div>
+              <p class="formulario-descripcion">
+                Completa el formulario y nos pondremos en contacto contigo para confirmar la disponibilidad.
+              </p>
+            </div>
+            
+            <form id="reservaForm" class="formulario-reserva">
+              
+              <div class="campo-grupo">
+                <label for="fechaLlegada">Llegada</label>
+                <input type="date" id="fechaLlegada" name="fechaLlegada" required>
+              </div>
+              
+              <div class="campo-grupo">
+                <label for="fechaSalida">Salida</label>
+                <input type="date" id="fechaSalida" name="fechaSalida" required>
+              </div>
+              
+              <div class="campo-grupo">
+                <label for="tipoHabitacion">Tipo de habitación</label>
+                <select id="tipoHabitacion" name="tipoHabitacion" required>
+                  <option value="estandar">Estándar - $180 USD / noche</option>
+                  <option value="deluxe">Deluxe - $250 USD / noche</option>
+                  <option value="suite">Suite "La Nube" - $390 USD / noche</option>
+                </select>
+              </div>
+              
+              <div class="campo-grupo">
+                <label for="huespedes">Huéspedes</label>
+                <select id="huespedes" name="huespedes" required>
+                  <option value="1">1 Huésped</option>
+                  <option value="2">2 Huéspedes</option>
+                  <option value="3">3 Huéspedes</option>
+                  <option value="4">4 Huéspedes</option>
+                </select>
+              </div>
+              
+              <div class="campo-grupo">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej. Elena Martínez" required>
+              </div>
+              
+              <div class="campo-grupo">
+                <label for="email">Correo electrónico</label>
+                <input type="email" id="email" name="email" placeholder="elena@ejemplo.com" required>
+              </div>
+              
+              <!-- Resumen de precios dinámico -->
+              <div class="resumen-precios" id="resumenPrecios">
+                <div class="resumen-item">
+                  <span>Habitación seleccionada:</span>
+                  <strong id="habitacionNombre">Estándar</strong>
+                </div>
+                <div class="resumen-item">
+                  <span>Precio por noche:</span>
+                  <strong id="precioNoche">$180 USD</strong>
+                </div>
+                <div class="resumen-item">
+                  <span>Número de noches:</span>
+                  <strong id="numeroNoches">0</strong>
+                </div>
+                <div class="resumen-total">
+                  <span>Total a pagar:</span>
+                  <strong id="totalPagar">$0 USD</strong>
+                </div>
+              </div>
+              
+              <button type="submit" class="btn-primario btn-reservar">
+                <i class="fa-regular fa-paper-plane"></i> Consultar disponibilidad
+              </button>
+              <p class="reserva-segura">
+                <i class="fa-solid fa-lock"></i> Reserva segura y encriptada
+              </p>
+              
+            </form>
+          </div>
+          
+          <!-- Columna Derecha: Beneficios + info adicional -->
+          <div class="reserva-info">
+            
+            <!-- Beneficios de reserva directa -->
+            <div class="beneficios-card">
+              <div class="beneficios-header">
+                <i class="fa-solid fa-gem"></i>
+                <h3>¿Por qué reservar directo?</h3>
+              </div>
+              <ul class="beneficios-lista">
+                <li>
+                  <i class="fa-solid fa-check-circle"></i>
+                  <span>Mejor tarifa garantizada y desayuno incluido</span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-check-circle"></i>
+                  <span>Acceso prioritario a nuestro spa de nubes</span>
+                </li>
+                <li>
+                  <i class="fa-solid fa-check-circle"></i>
+                  <span>Cancelación flexible hasta 48h antes</span>
+                </li>
+              </ul>
+            </div>
+            
+            <!-- Cita inspiracional -->
+            <div class="inspiracion-card">
+              <i class="fa-solid fa-leaf"></i>
+              <h4>El interior</h4>
+              <p>Espacios que respiran calma y diseño orgánico. Nuestras suites utilizan materiales sostenibles y una paleta cromática inspirada en la bruma matutina para garantizar un descanso profundo.</p>
+            </div>
+            
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ============================================================
+       FOOTER (IDÉNTICO)
+  ============================================================ -->
+<footer>
         <div class="footer-inner">
  
          <!-- Grid de columnas -->
@@ -131,3 +291,6 @@
     </div>
   </footer>
 </body>
+</html>
+
+    
