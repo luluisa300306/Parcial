@@ -3,10 +3,381 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hotel Casa en las Nubes — Tu lugar de descanso</title>
+  <title>Casa en las Nubes — Nuestras Habitaciones</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
 </head>
+
+<body>
+
+  <!-- ============================================================
+       HEADER & NAVEGACIÓN (IDÉNTICO AL HOME)
+  ============================================================ -->
+  <header>
+    <nav class="nav-inner" aria-label="Navegación principal">
+      <a href="index.html" class="logo">
+        Casa en las Nubes<span>.</span> Hotel Boutique
+      </a>
+ 
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="habitaciones.html" class="activo">Habitaciones</a></li>
+        <li><a href="reserva.html">Reserva</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+ 
+      <div class="nav-cta">
+        <a href="reserva.html" class="btn-primario">Reservar ahora</a>
+      </div>
+ 
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+ 
+    <nav class="nav-mobile" id="navMobile" aria-label="Menú móvil">
+      <a href="index.html">Inicio</a>
+      <a href="habitaciones.html">Habitaciones</a>
+      <a href="reserva.html">Reserva</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="reserva.html" class="btn-primario">Reservar ahora</a>
+    </nav>
+  </header>
+
+
+  <!-- ============================================================
+       MAIN - PÁGINA DE HABITACIONES
+  ============================================================ -->
+  <main>
+
+    <!-- =====================
+         HERO DE HABITACIONES
+    ===================== -->
+    <section class="hero hero-habitaciones" aria-label="Portada habitaciones">
+      <div class="hero-bg habitaciones-bg" role="img" aria-label="Vista de habitaciones con vistas al valle"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="hero-eyebrow">
+          <i class="fa-solid fa-bed" style="margin-right:.4rem;"></i>
+          Nuestras Estancias
+        </span>
+        <h1 class="hero-titulo">Espacios diseñados para <span>fundirse con el horizonte</span></h1>
+        <div class="hero-divisor"></div>
+        <p class="hero-subtitulo">
+          Un refugio de paz táctil y vistas infinitas al valle.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- =====================
+         INTRO HABITACIONES
+    ===================== -->
+    <section class="seccion" id="intro-habitaciones">
+      <div class="seccion-inner texto-centro">
+        <div class="experiencia-intro">
+          <span class="seccion-eyebrow">Descanso elevado</span>
+          <h2 class="seccion-titulo">
+            Diseñadas para <span>fundirse con el horizonte</span>
+          </h2>
+          <div class="seccion-divisor"></div>
+          <p class="seccion-subtitulo">
+            Nuestras habitaciones ofrecen un refugio de paz táctil y vistas infinitas al valle.
+          </p>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================
+         LISTADO DE HABITACIONES (COMPLETO)
+    ===================== -->
+    <section class="seccion habitaciones-completas" id="lista-habitaciones">
+      <div class="seccion-inner">
+        
+        <div class="habitaciones-grid-completo">
+          
+          <!-- Habitación Estándar -->
+          <article class="hab-card-detallada">
+            <div class="hab-imagen-detallada">
+              <div class="hab-imagen-placeholder-grande"
+                   style="background:linear-gradient(135deg,#c8a882,#8b6340);">
+                <i class="fa-solid fa-door-open fa-3x"></i>
+              </div>
+            </div>
+            <div class="hab-contenido-detallado">
+              <span class="hab-tipo">Habitación Estándar</span>
+              <h3 class="hab-titulo-detallado">Serenidad esencial</h3>
+              <p class="hab-descripcion-detallada">
+                Un espacio de serenidad esencial, ideal para quienes buscan desconectar sin renunciar al confort botánico del cielo.
+              </p>
+              
+              <div class="hab-caracteristicas">
+                <div class="caracteristica">
+                  <i class="fa-solid fa-shower"></i>
+                  <span>Ducha de lluvia</span>
+                </div>
+                <div class="caracteristica">
+                  <i class="fa-solid fa-wind"></i>
+                  <span>Climatización</span>
+                </div>
+                <div class="caracteristica">
+                  <i class="fa-solid fa-mug-hot"></i>
+                  <span>Kit de café premium</span>
+                </div>
+              </div>
+              
+              <div class="hab-precio-detallado">
+                <span class="precio-desde">Desde</span>
+                <strong>$180 <small>USD / noche</small></strong>
+              </div>
+              
+              <a href="reserva.html?tipo=estandar" class="btn-primario">
+                <i class="fa-solid fa-calendar-check"></i> Reservar ahora
+              </a>
+            </div>
+          </article>
+          
+          <!-- Habitación Deluxe -->
+          <article class="hab-card-detallada reverse">
+            <div class="hab-imagen-detallada">
+              <div class="hab-imagen-placeholder-grande"
+                   style="background:linear-gradient(135deg,#a07040,#6b3e1a);">
+                <i class="fa-solid fa-star fa-3x"></i>
+              </div>
+            </div>
+            <div class="hab-contenido-detallado">
+              <span class="hab-tipo">Habitación Deluxe</span>
+              <h3 class="hab-titulo-detallado">Vistas que tocan las nubes</h3>
+              <p class="hab-descripcion-detallada">
+                Elevamos la experiencia con vistas panorámicas al valle y una terraza privada para tocar las nubes cada mañana.
+              </p>
+              
+              <div class="hab-caracteristicas">
+                <div class="caracteristica">
+                  <i class="fa-solid fa-tree"></i>
+                  <span>Terraza privada</span>
+                </div>
+                <div class="caracteristica">
+                  <i class="fa-solid fa-mug-saucer"></i>
+                  <span>Nespresso Corner</span>
+                </div>
+                <div class="caracteristica">
+                  <i class="fa-solid fa-mountain"></i>
+                  <span>Vistas al valle</span>
+                </div>
+              </div>
+              
+              <div class="hab-precio-detallado">
+                <span class="precio-desde">Desde</span>
+                <strong>$250 <small>USD / noche</small></strong>
+              </div>
+              
+              <a href="reserva.html?tipo=deluxe" class="btn-primario">
+                <i class="fa-solid fa-calendar-check"></i> Reservar ahora
+              </a>
+            </div>
+          </article>
+          
+          <!-- Suite "La Nube" -->
+          <article class="hab-card-detallada">
+            <div class="hab-imagen-detallada">
+              <div class="hab-imagen-placeholder-grande"
+                   style="background:linear-gradient(135deg,#7a3030,#3E7C59);">
+                <i class="fa-solid fa-crown fa-3x"></i>
+              </div>
+            </div>
+            <div class="hab-contenido-detallado">
+              <span class="hab-tipo">Suite "La Nube"</span>
+              <h3 class="hab-titulo-detallado">Nuestra joya arquitectónica</h3>
+              <p class="hab-descripcion-detallada">
+                Nuestra joya arquitectónica. Bañera exenta frente al ventanal, chimenea de diseño y el máximo lujo táctil.
+              </p>
+              
+              <div class="hab-caracteristicas">
+                <div class="caracteristica">
+                  <i class="fa-solid fa-hot-tub"></i>
+                  <span>Bañera exenta</span>
+                </div>
+                <div class="caracteristica">
+                  <i class="fa-solid fa-fire"></i>
+                  <span>Chimenea ecológica</span>
+                </div>
+                <div class="caracteristica">
+                  <i class="fa-solid fa-champagne-glasses"></i>
+                  <span>Welcome champagne</span>
+                </div>
+              </div>
+              
+              <div class="hab-precio-detallado">
+                <span class="precio-desde">Desde</span>
+                <strong>$390 <small>USD / noche</small></strong>
+              </div>
+              
+              <a href="reserva.html?tipo=suite" class="btn-primario">
+                <i class="fa-solid fa-calendar-check"></i> Reservar ahora
+              </a>
+            </div>
+          </article>
+          
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================
+         SERVICIOS ESPECIALES (EXPERIENCIAS A MEDIDA)
+    ===================== -->
+    <section class="seccion servicios-especiales" id="experiencias" aria-label="Experiencias a medida">
+      <div class="seccion-inner texto-centro">
+        <span class="seccion-eyebrow" style="color:var(--color-secundario);">Experiencias únicas</span>
+        <h2 class="seccion-titulo">
+          Experiencias <span>a medida</span>
+        </h2>
+        <div class="seccion-divisor"></div>
+        <p class="seccion-subtitulo">
+          ¿Buscas algo especial? Personalizamos tu estancia con masajes en habitación, cenas privadas o vuelos en globo.
+        </p>
+        
+        <div class="servicios-grid">
+          <div class="servicio-card">
+            <i class="fa-solid fa-spa"></i>
+            <h4>Masajes en habitación</h4>
+            <p>Terapias de relajación con aceites esenciales en la privacidad de tu estancia.</p>
+          </div>
+          <div class="servicio-card">
+            <i class="fa-solid fa-utensils"></i>
+            <h4>Cenas privadas</h4>
+            <p>Chef personalizado con menú degustación bajo las estrellas.</p>
+          </div>
+          <div class="servicio-card">
+            <i class="fa-solid fa-hot-air-balloon"></i>
+            <h4>Vuelos en globo</h4>
+            <p>Amanece sobre el valle con una experiencia inolvidable.</p>
+          </div>
+        </div>
+        
+        <div class="cta-servicios">
+          <a href="contacto.html" class="btn-secundario btn-grande">
+            <i class="fa-solid fa-envelope"></i> Consultar servicios especiales
+          </a>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================
+         LLAMADO A LA ACCIÓN FINAL
+    ===================== -->
+    <section class="seccion cta-seccion" id="cta-final" aria-label="Reserva tu estadía">
+      <div class="cta-inner">
+        <span class="seccion-eyebrow" style="color:var(--color-secundario);">Tu refugio te espera</span>
+        <h2 class="cta-titulo">Descubre tu habitación ideal</h2>
+        <div class="cta-divisor"></div>
+        <p class="cta-subtitulo">
+          Cada espacio ha sido diseñado para ofrecerte una experiencia única.<br/>
+          Elige la que más resuene contigo.
+        </p>
+        <a href="reserva.html" class="btn-blanco">
+          <i class="fa-solid fa-calendar-check" style="margin-right:.5rem;"></i>
+          Ver disponibilidad
+        </a>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ============================================================
+       FOOTER (IDÉNTICO AL HOME)
+  ============================================================ -->
+  <footer>
+    <div class="footer-inner">
+ 
+      <div class="footer-grid">
+ 
+        <div>
+          <p class="footer-logo">Casa en las Nubes<span>.</span> Hotel Boutique</p>
+          <p class="footer-desc">
+            Un refugio donde cada estancia es una experiencia diseñada para reconectar con lo esencial.
+          </p>
+          <div class="footer-contacto">
+            <div class="footer-contacto-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Calle 45 #12-30, Eje Cafetero, Colombia</span>
+            </div>
+            <div class="footer-contacto-item">
+              <i class="fa-solid fa-phone"></i>
+              <span>+57 321 456 7890</span>
+            </div>
+            <div class="footer-contacto-item">
+              <i class="fa-solid fa-envelope"></i>
+              <a href="contacto.html" style="color:rgba(255,255,255,.65);transition:color .22s;"
+                 onmouseover="this.style.color='#fff'"
+                 onmouseout="this.style.color='rgba(255,255,255,.65)'">
+                hola@casalasnubes.com
+              </a>
+            </div>
+          </div>
+          <div class="footer-redes" aria-label="Redes sociales">
+            <a href="#" class="footer-red" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="footer-red" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="footer-red" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#" class="footer-red" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+          </div>
+        </div>
+ 
+        <div>
+          <p class="footer-nav-titulo">Explorar</p>
+          <ul class="footer-nav-lista" role="list">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="habitaciones.html">Habitaciones</a></li>
+            <li><a href="reserva.html">Reserva</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </div>
+ 
+        <div>
+          <p class="footer-nav-titulo">Información</p>
+          <ul class="footer-nav-lista" role="list">
+            <li><a href="contacto.html">Centro de ayuda</a></li>
+            <li><a href="#">Política de privacidad</a></li>
+            <li><a href="#">Términos y condiciones</a></li>
+            <li><a href="#">Política de cancelación</a></li>
+          </ul>
+        </div>
+ 
+      </div>
+ 
+      <div class="footer-barra">
+        <p class="footer-copy">
+          &copy; 2025 Casa en las Nubes Hotel Boutique. Todos los derechos reservados.
+        </p>
+      </div>
+ 
+    </div>
+  </footer>
+
+
+  <!-- Script para menú hamburguesa (mismo que en home) -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navMobile = document.getElementById('navMobile');
+    
+    if (hamburger && navMobile) {
+      hamburger.addEventListener('click', () => {
+        const expanded = hamburger.getAttribute('aria-expanded') === 'true' ? false : true;
+        hamburger.setAttribute('aria-expanded', expanded);
+        navMobile.classList.toggle('active');
+        document.body.classList.toggle('menu-open');
+      });
+    }
+  </script>
+
+</body>
+</html>
