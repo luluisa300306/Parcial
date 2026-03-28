@@ -1144,10 +1144,11 @@ header {
 
 .contacto-bg {
     background: linear-gradient(135deg,
-        #1a3a3a 0%,
-        #2c5a5a 30%,
-        #3e7c59 60%,
-        #6396ca 100%);
+          #0e272c 0%,
+          #328fb4 25%,
+          #416dab 50%,
+          #76d5f7 70%,
+          #3e797c 100%);
 }
 
 /* Grid principal de contacto */
@@ -1506,10 +1507,11 @@ header {
 
 .reserva-bg {
     background: linear-gradient(135deg,
-        #1a3a3a 0%,
-        #2c5a5a 30%,
-        #3e7c59 60%,
-        #6396ca 100%);
+          #0e272c 0%,
+          #328fb4 25%,
+          #416dab 50%,
+          #76d5f7 70%,
+          #3e797c 100%);
 }
 
 /* Grid principal de reserva */
