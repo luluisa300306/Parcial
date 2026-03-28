@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Hotel Casa en las Nubes — Tu lugar de descanso</title>
+  <title>Casa en las Nubes — Contacto</title>
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,116 +12,269 @@
 </head>
 
 <body>
-    <header>
-        <nav class="nav-inner" aria-label="Navegación principal">
-            <!-- Logo -->
-            <a href="index.html" class="logo">
-                Casa en las Nubes<span>.</span> Hotel Boutique
-            </a>
- 
-            <!-- Menú desktop -->
-            <ul class="nav-links" role="list">
-                <li><a href="index.html" class="activo">Inicio</a></li>
-                <li><a href="habitaciones.html">Habitaciones</a></li>
-                <li><a href="reserva.html">Reserva</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
- 
-            <!-- CTA desktop -->
-            <div class="nav-cta">
-                <a href="reserva.html" class="btn-primario">Reservar ahora</a>
-            </div>
- 
-            <!-- Botón hamburguesa (mobile) -->
-            <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </nav>
- 
-    <!-- Menú mobile desplegable -->
-        <nav class="nav-mobile" id="navMobile" aria-label="Menú móvil">
-            <a href="index.html">Inicio</a>
-            <a href="habitaciones.html">Habitaciones</a>
-            <a href="reserva.html">Reserva</a>
-            <a href="contacto.html">Contacto</a>
-            <a href="reserva.html" class="btn-primario">Reservar ahora</a>
-        </nav>
-    </header>
 
-    <footer>
-        <div class="footer-inner">
+  <!-- ============================================================
+       HEADER & NAVEGACIÓN (IDÉNTICO AL HOME)
+  ============================================================ -->
+  <header>
+    <nav class="nav-inner" aria-label="Navegación principal">
+      <a href="index.html" class="logo">
+        Casa en las Nubes<span>.</span> Hotel Boutique
+      </a>
  
-         <!-- Grid de columnas -->
-            <div class="footer-grid">
+      <ul class="nav-links" role="list">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="habitaciones.html">Habitaciones</a></li>
+        <li><a href="reserva.html">Reserva</a></li>
+        <li><a href="contacto.html" class="activo">Contacto</a></li>
+      </ul>
  
-            <!-- Columna 1: Marca + contacto -->
-                <div>
-                    <p class="footer-logo">Casa en las Nubes<span>.</span> Hotel Boutique</p>
-                    <p class="footer-desc">
-                    Un refugio donde cada estancia es una experiencia diseñada para reconectar con lo esencial.
-                    </p>
-                    <div class="footer-contacto">
-                        <div class="footer-contacto-item">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <span>Calle 45 #12-30, Eje Cafetero, Colombia</span>
-                        </div>
-                        <div class="footer-contacto-item">
-                            <i class="fa-solid fa-phone"></i>
-                            <span>+57 321 456 7890</span>
-                        </div>
-                        <div class="footer-contacto-item">
-                            <i class="fa-solid fa-envelope"></i>
-                            <a href="contacto.html" style="color:rgba(255,255,255,.65);transition:color .22s;"
-                                onmouseover="this.style.color='#fff'"
-                                onmouseout="this.style.color='rgba(255,255,255,.65)'">
-                                hola@aurahotelboutique.com
-                            </a>
-                        </div>
-                    </div>
-            <!-- Redes sociales -->
-                    <div class="footer-redes" aria-label="Redes sociales">
-                        <a href="#" class="footer-red" aria-label="Instagram">
-                            <i class="fa-brands fa-instagram"></i>
-                        </a>
-                        <a href="#" class="footer-red" aria-label="Facebook">
-                            <i class="fa-brands fa-facebook-f"></i>
-                        </a>
-                        <a href="#" class="footer-red" aria-label="TikTok">
-                            <i class="fa-brands fa-tiktok"></i>
-                        </a>
-                        <a href="#" class="footer-red" aria-label="Pinterest">
-                            <i class="fa-brands fa-pinterest-p"></i>
-                        </a>
-                    </div>
+      <div class="nav-cta">
+        <a href="reserva.html" class="btn-primario">Reservar ahora</a>
+      </div>
+ 
+      <button class="hamburger" id="hamburger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+ 
+    <nav class="nav-mobile" id="navMobile" aria-label="Menú móvil">
+      <a href="index.html">Inicio</a>
+      <a href="habitaciones.html">Habitaciones</a>
+      <a href="reserva.html">Reserva</a>
+      <a href="contacto.html">Contacto</a>
+      <a href="reserva.html" class="btn-primario">Reservar ahora</a>
+    </nav>
+  </header>
+
+
+  <!-- ============================================================
+       MAIN - PÁGINA DE CONTACTO
+  ============================================================ -->
+  <main>
+
+    <!-- =====================
+         HERO DE CONTACTO
+    ===================== -->
+    <section class="hero hero-contacto" aria-label="Portada contacto">
+      <div class="hero-bg contacto-bg" role="img" aria-label="Amanecer en el valle de las nubes"></div>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <span class="hero-eyebrow">
+          <i class="fa-regular fa-message" style="margin-right:.4rem;"></i>
+          Conecta con nosotros
+        </span>
+        <h1 class="hero-titulo">Contáctanos</h1>
+        <div class="hero-divisor"></div>
+        <p class="hero-subtitulo">
+          Permítanos elevar su experiencia. Ya sea una duda sobre nuestras suites o una petición especial para su estancia, estamos aquí para asistirle.
+        </p>
+      </div>
+    </section>
+
+
+    <!-- =====================
+         SECCIÓN CONTACTO PRINCIPAL
+    ===================== -->
+    <section class="seccion contacto-principal" id="contacto">
+      <div class="seccion-inner">
+        
+        <div class="contacto-grid">
+          
+          <!-- Columna Izquierda: Información de contacto -->
+          <div class="contacto-info">
+            <div class="contacto-tarjetas">
+              
+              <!-- Dirección -->
+              <div class="contacto-tarjeta">
+                <div class="contacto-icono">
+                  <i class="fa-solid fa-location-dot"></i>
                 </div>
+                <div class="contacto-detalle">
+                  <h4>Dirección</h4>
+                  <p>Camino al Cielo Km 4.5, Valle de las Nubes, México</p>
+                </div>
+              </div>
+              
+              <!-- WhatsApp -->
+              <div class="contacto-tarjeta">
+                <div class="contacto-icono">
+                  <i class="fa-brands fa-whatsapp"></i>
+                </div>
+                <div class="contacto-detalle">
+                  <h4>WhatsApp</h4>
+                  <p>+52 (55) 1234 5678</p>
+                </div>
+              </div>
+              
+              <!-- Teléfono -->
+              <div class="contacto-tarjeta">
+                <div class="contacto-icono">
+                  <i class="fa-solid fa-phone"></i>
+                </div>
+                <div class="contacto-detalle">
+                  <h4>Teléfono</h4>
+                  <p>+52 (55) 8765 4321</p>
+                </div>
+              </div>
+              
+              <!-- Email -->
+              <div class="contacto-tarjeta">
+                <div class="contacto-icono">
+                  <i class="fa-regular fa-envelope"></i>
+                </div>
+                <div class="contacto-detalle">
+                  <h4>Email</h4>
+                  <p>hola@casanubes.com</p>
+                </div>
+              </div>
+              
+            </div>
+            
+            <!-- Widget de clima -->
+            <div class="clima-widget">
+              <div class="clima-icono">
+                <i class="fa-solid fa-cloud-sun"></i>
+              </div>
+              <div class="clima-info">
+                <h4>Clima en las Nubes</h4>
+                <p>Perfecto para una tarde frente a la chimenea.</p>
+                <div class="clima-temperatura">18°C</div>
+              </div>
+            </div>
+            
+          </div>
+          
+          <!-- Columna Derecha: Formulario de contacto -->
+          <div class="contacto-formulario">
+            <div class="formulario-header">
+              <span class="seccion-eyebrow">Escríbenos</span>
+              <h2 class="formulario-titulo">Envíenos un mensaje</h2>
+              <div class="formulario-divisor"></div>
+            </div>
+            
+            <form action="#" method="POST" class="formulario">
+              
+              <div class="campo-grupo">
+                <label for="nombre">Nombre completo</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej. Sofía García" required>
+              </div>
+              
+              <div class="campo-grupo">
+                <label for="asunto">Asunto</label>
+                <select id="asunto" name="asunto" required>
+                  <option value="" disabled selected>¿Cómo podemos ayudarle?</option>
+                  <option value="reservas">Información sobre reservas</option>
+                  <option value="habitaciones">Detalles de habitaciones</option>
+                  <option value="eventos">Eventos y celebraciones</option>
+                  <option value="experiencias">Experiencias a medida</option>
+                  <option value="otro">Otro</option>
+                </select>
+              </div>
+              
+              <div class="campo-grupo">
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="5" placeholder="Cuéntenos más sobre sus planes de viaje..." required></textarea>
+              </div>
+              
+              <button type="submit" class="btn-primario btn-enviar">
+                <i class="fa-regular fa-paper-plane"></i> Enviar mensaje
+              </button>
+              
+            </form>
+          </div>
+          
+        </div>
+      </div>
+    </section>
+
+
+    <!-- =====================
+         SECCIÓN DE REFUGIO (CITA INSPIRACIONAL)
+    ===================== -->
+    <section class="seccion refugio-seccion" id="refugio">
+      <div class="seccion-inner texto-centro">
+        <i class="fa-solid fa-feather-pointed refugio-icono"></i>
+        <h2 class="refugio-titulo">Un refugio de serenidad</h2>
+        <div class="refugio-divisor"></div>
+        <p class="refugio-texto">
+          Una experiencia boutique diseñada para reconectar con el cielo y la tierra<br/>
+          en un entorno de lujo consciente.
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ============================================================
+       FOOTER (IDÉNTICO AL HOME CON AJUSTES DE NEWSLETTER)
+  ============================================================ -->
+  <footer>
+    <div class="footer-inner">
  
-        <!-- Columna 2: Explorar -->
+      <div class="footer-grid">
+ 
+        <!-- Columna 1: Marca + descripción -->
         <div>
-          <p class="footer-nav-titulo">Explorar</p>
+          <p class="footer-logo">Casa en las Nubes<span>.</span> Hotel Boutique</p>
+          <p class="footer-desc">
+            Una experiencia boutique diseñada para reconectar con el cielo y la tierra en un entorno de lujo consciente.
+          </p>
+          <div class="footer-contacto">
+            <div class="footer-contacto-item">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Camino al Cielo Km 4.5, Valle de las Nubes, México</span>
+            </div>
+            <div class="footer-contacto-item">
+              <i class="fa-solid fa-phone"></i>
+              <span>+52 (55) 8765 4321</span>
+            </div>
+            <div class="footer-contacto-item">
+              <i class="fa-regular fa-envelope"></i>
+              <a href="contacto.html" style="color:rgba(255,255,255,.65);transition:color .22s;"
+                 onmouseover="this.style.color='#fff'"
+                 onmouseout="this.style.color='rgba(255,255,255,.65)'">
+                hola@casanubes.com
+              </a>
+            </div>
+          </div>
+          <div class="footer-redes" aria-label="Redes sociales">
+            <a href="#" class="footer-red" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="footer-red" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="footer-red" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            <a href="#" class="footer-red" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+          </div>
+        </div>
+ 
+        <!-- Columna 2: Enlaces -->
+        <div>
+          <p class="footer-nav-titulo">Enlaces</p>
           <ul class="footer-nav-lista" role="list">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="habitaciones.html">Habitaciones</a></li>
-            <li><a href="reserva.html">Reserva</a></li>
-            <li><a href="contacto.html">Contacto</a></li>
+            <li><a href="#">Privacidad</a></li>
+            <li><a href="#">Términos</a></li>
+            <li><a href="#">Soporte</a></li>
           </ul>
         </div>
  
-        <!-- Columna 3: Soporte & legal -->
+        <!-- Columna 3: Newsletter -->
         <div>
-          <p class="footer-nav-titulo">Información</p>
-          <ul class="footer-nav-lista" role="list">
-            <li><a href="contacto.html">Centro de ayuda</a></li>
-            <li><a href="#">Política de privacidad</a></li>
-            <li><a href="#">Términos y condiciones</a></li>
-            <li><a href="#">Política de cancelación</a></li>
-          </ul>
+          <p class="footer-nav-titulo">Newsletter</p>
+          <p class="footer-newsletter-texto">
+            Reciba inspiración y ofertas exclusivas directamente en su bandeja.
+          </p>
+          <form class="footer-newsletter-form" action="#" method="POST">
+            <input type="email" placeholder="Tu email" required>
+            <button type="submit" class="btn-newsletter">
+              <i class="fa-regular fa-paper-plane"></i>
+            </button>
+          </form>
         </div>
  
       </div>
  
-      <!-- Barra de copyright -->
       <div class="footer-barra">
         <p class="footer-copy">
           &copy; 2025 Casa en las Nubes Hotel Boutique. Todos los derechos reservados.
@@ -130,4 +283,8 @@
  
     </div>
   </footer>
+
+  
+
 </body>
+</html>

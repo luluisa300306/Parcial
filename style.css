@@ -1130,3 +1130,365 @@ header {
         font-size: 0.8rem;
     }
 }
+
+/* ============================================================
+   PÁGINA DE CONTACTO
+============================================================ */
+
+/* Hero específico para contacto */
+.hero-contacto {
+    min-height: 60vh;
+    height: auto;
+    padding: 8rem 0 4rem;
+}
+
+.contacto-bg {
+    background: linear-gradient(135deg,
+        #1a3a3a 0%,
+        #2c5a5a 30%,
+        #3e7c59 60%,
+        #6396ca 100%);
+}
+
+/* Grid principal de contacto */
+.contacto-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+/* Información de contacto - tarjetas */
+.contacto-tarjetas {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.contacto-tarjeta {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+    background: var(--color-blanco);
+    padding: 1.2rem 1.5rem;
+    border-radius: var(--radius-card);
+    box-shadow: var(--sombra-suave);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid var(--color-borde);
+}
+
+.contacto-tarjeta:hover {
+    transform: translateX(6px);
+    box-shadow: var(--sombra-card);
+}
+
+.contacto-icono {
+    width: 48px;
+    height: 48px;
+    background: var(--color-principal-light);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.contacto-icono i {
+    font-size: 1.2rem;
+    color: var(--color-principal);
+}
+
+.contacto-detalle h4 {
+    font-family: var(--font-titulo);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-secundario);
+    margin-bottom: 0.4rem;
+}
+
+.contacto-detalle p {
+    font-size: 0.95rem;
+    color: var(--color-texto);
+    line-height: 1.5;
+}
+
+/* Widget de clima */
+.clima-widget {
+    background: linear-gradient(135deg, var(--color-principal) 0%, var(--color-secundario) 100%);
+    border-radius: var(--radius-card);
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+    color: var(--color-blanco);
+    box-shadow: var(--sombra-card);
+}
+
+.clima-icono i {
+    font-size: 2.5rem;
+    opacity: 0.9;
+}
+
+.clima-info h4 {
+    font-family: var(--font-titulo);
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    margin-bottom: 0.3rem;
+}
+
+.clima-info p {
+    font-size: 0.8rem;
+    opacity: 0.85;
+    margin-bottom: 0.3rem;
+}
+
+.clima-temperatura {
+    font-size: 1.5rem;
+    font-weight: 700;
+    font-family: var(--font-titulo);
+}
+
+/* Formulario de contacto */
+.contacto-formulario {
+    background: var(--color-blanco);
+    border-radius: var(--radius-card);
+    padding: 2.5rem;
+    box-shadow: var(--sombra-card);
+    border: 1px solid var(--color-borde);
+}
+
+.formulario-header {
+    margin-bottom: 2rem;
+}
+
+.formulario-titulo {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-texto);
+    margin-bottom: 0.5rem;
+}
+
+.formulario-divisor {
+    width: 48px;
+    height: 3px;
+    background: var(--color-secundario);
+    border-radius: 2px;
+    margin-top: 0.8rem;
+}
+
+/* Campos del formulario */
+.campo-grupo {
+    margin-bottom: 1.5rem;
+}
+
+.campo-grupo label {
+    display: block;
+    font-family: var(--font-titulo);
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--color-texto-suave);
+    margin-bottom: 0.5rem;
+}
+
+.campo-grupo input,
+.campo-grupo select,
+.campo-grupo textarea {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    font-family: var(--font-texto);
+    font-size: 0.95rem;
+    border: 1px solid var(--color-borde);
+    border-radius: 12px;
+    background: var(--color-fondo);
+    transition: all 0.25s ease;
+    color: var(--color-texto);
+}
+
+.campo-grupo input:focus,
+.campo-grupo select:focus,
+.campo-grupo textarea:focus {
+    outline: none;
+    border-color: var(--color-principal);
+    box-shadow: 0 0 0 3px var(--color-principal-light);
+}
+
+.campo-grupo textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.btn-enviar {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    margin-top: 0.5rem;
+}
+
+.btn-enviar i {
+    font-size: 0.9rem;
+}
+
+/* Sección refugio */
+.refugio-seccion {
+    background: var(--color-fondo);
+    text-align: center;
+    padding: 5rem 1.5rem;
+}
+
+.refugio-icono {
+    font-size: 2.5rem;
+    color: var(--color-secundario);
+    margin-bottom: 1.5rem;
+    opacity: 0.7;
+}
+
+.refugio-titulo {
+    font-size: clamp(1.6rem, 4vw, 2.2rem);
+    font-weight: 700;
+    color: var(--color-texto);
+    margin-bottom: 1rem;
+}
+
+.refugio-divisor {
+    width: 48px;
+    height: 2px;
+    background: var(--color-secundario);
+    margin: 1rem auto 1.5rem;
+}
+
+.refugio-texto {
+    font-size: 1rem;
+    color: var(--color-texto-suave);
+    line-height: 1.8;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Newsletter en footer */
+.footer-newsletter-texto {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    margin-bottom: 1rem;
+    color: rgba(255, 255, 255, 0.65);
+}
+
+.footer-newsletter-form {
+    display: flex;
+    gap: 0.5rem;
+    align-items: center;
+}
+
+.footer-newsletter-form input {
+    flex: 1;
+    padding: 0.7rem 1rem;
+    border: none;
+    border-radius: 40px;
+    font-family: var(--font-texto);
+    font-size: 0.85rem;
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--color-blanco);
+}
+
+.footer-newsletter-form input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.footer-newsletter-form input:focus {
+    outline: none;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.btn-newsletter {
+    background: var(--color-secundario);
+    border: none;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    color: var(--color-blanco);
+}
+
+.btn-newsletter:hover {
+    background: var(--color-principal);
+    transform: scale(1.05);
+}
+
+/* ============================================================
+   RESPONSIVE PARA CONTACTO
+============================================================ */
+
+@media (max-width: 900px) {
+    .contacto-grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+    
+    .contacto-info {
+        order: 2;
+    }
+    
+    .contacto-formulario {
+        order: 1;
+    }
+}
+
+@media (max-width: 680px) {
+    .hero-contacto {
+        min-height: 50vh;
+        padding: 7rem 0 3rem;
+    }
+    
+    .contacto-formulario {
+        padding: 1.8rem;
+    }
+    
+    .formulario-titulo {
+        font-size: 1.4rem;
+    }
+    
+    .contacto-tarjeta {
+        padding: 1rem;
+    }
+    
+    .contacto-icono {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .contacto-icono i {
+        font-size: 1rem;
+    }
+    
+    .contacto-detalle p {
+        font-size: 0.85rem;
+    }
+    
+    .clima-widget {
+        padding: 1.2rem;
+    }
+    
+    .clima-icono i {
+        font-size: 2rem;
+    }
+    
+    .clima-temperatura {
+        font-size: 1.2rem;
+    }
+    
+    .refugio-seccion {
+        padding: 3rem 1.2rem;
+    }
+}
