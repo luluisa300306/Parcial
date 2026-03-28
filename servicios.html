@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <script src="script.js"></script>
 </head>
 
 <body>
@@ -320,7 +321,7 @@
               <a href="contacto.html" style="color:rgba(255,255,255,.65);transition:color .22s;"
                  onmouseover="this.style.color='#fff'"
                  onmouseout="this.style.color='rgba(255,255,255,.65)'">
-                hola@casalasnubes.com
+                hola@casaenlasnubeshotelboutique.com
               </a>
             </div>
           </div>
@@ -362,22 +363,5 @@
  
     </div>
   </footer>
-
-
-  <!-- Script para menú hamburguesa (mismo que en home) -->
-  <script>
-    const hamburger = document.getElementById('hamburger');
-    const navMobile = document.getElementById('navMobile');
-    
-    if (hamburger && navMobile) {
-      hamburger.addEventListener('click', () => {
-        const expanded = hamburger.getAttribute('aria-expanded') === 'true' ? false : true;
-        hamburger.setAttribute('aria-expanded', expanded);
-        navMobile.classList.toggle('active');
-        document.body.classList.toggle('menu-open');
-      });
-    }
-  </script>
-
 </body>
 </html>
