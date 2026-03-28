@@ -1020,6 +1020,14 @@ header {
     margin-top: 2rem;
 }
 
+#intro-habitaciones {
+  padding-bottom: 2rem;
+}
+
+#lista-habitaciones {
+  padding-top: 1rem;
+}
+
 .btn-grande {
     padding: 1rem 2.8rem;
     font-size: 0.9rem;
