@@ -297,6 +297,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const diferenciaDias = Math.ceil(diferenciaTiempo / (1000 * 3600 * 24));
         
         return diferenciaDias;
+        console.log('Noches calculadas:', diferenciaDias);
+        return diferenciaDias;
     }
     
     // Función para actualizar el resumen de precios
@@ -316,6 +318,7 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             totalPagarSpan.textContent = `$0 USD`;
         }
+        console.log('Actualizar resumen:', {habitacion, precioPorNoche, noches, total});
     }
     
     // Escuchar cambios en los campos que afectan el precio
@@ -383,8 +386,13 @@ document.addEventListener('DOMContentLoaded', function() {
                     submitBtn.style.background = '';
                 }, 3000);
             }, 1500);
+            console.log('Submit del formulario de reserva');
+            console.log('Datos de reserva:', {nombre, email, noches, habitacion, total});
         });
     }
-    
+
+    function showNotification(msg) {
+  alert(msg);
+}    
     // Inicializar resumen
     actualizarResumen();
